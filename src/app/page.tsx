@@ -36,7 +36,7 @@ export default function Home() {
 						type="checkbox"
 						name=""
 						id="accordion"
-						className=""
+						className="hidden"
 					/>
 					{/* can also use radio buttons similarly for multiple cards */}
 					{/* kept visible for demo */}
