@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #141414;
+	--text: #e4ded8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Great for debugging any layout and styling issues such as overflows */
+* {
+	/* outline: solid; */
+	/* short-hand property, can also include outline-width, outline-color */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.Hero {
+	/* background-image values are sequential and can have multiple images or gradient */
+	background-image: url(../../public/noise.png),
+		radial-gradient(circle at 50% 0, #00001a 60%, transparent 85%),
+		linear-gradient(to right, #624dce, #e0686c, #99579f);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.clamp {
+	/* clamps the size between 3 and 8 rem with optimal size as 9.3vw + 1px */
+	font-size: clamp(3rem, 9.3vw + 1px, 8rem);
+}
+
+/* using :has selector to select the previous sibling on the check condition of the input */
+/* go to 1fr from 0fr WHEN .accordion-grid HAS a sibling #accordion which is CHECKED */
+.accordion-grid:has(~ #accordion:checked) {
+	/* grid-template-rows: auto 1fr; */
+}
+
+@keyframes text-animation {
+	to {
+		transform: translateY(0);
+		opacity: 100%;
+	}
 }
