@@ -1,4 +1,4 @@
-import { Textanimation } from "@/components/textanimation"
+import Textanimation from "@/components/textanimation"
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 						<Textanimation name="how-to layout?" />
 						<p className="lg:text-xl text-center mt-4 opacity-0 -translate-y-full animate-[text-animation_700ms_forwards]">
 							Welcome to the{" "}
-							<code className="bg-white/20 p-1 rounded-md">
+							<code className="bg-white/20 p-1 rounded-md inline-block">
 								design replication
 							</code>{" "}
 							seminar by{" "}
@@ -22,7 +22,7 @@ export default function Home() {
 			</div>
 
 			<div className="min-h-svh grid place-items-center">
-				<div className="card | max-w-screen-md flex items-start gap-4">
+				<div className="card | max-w-screen-md flex items-start gap-2">
 					<div className="accordion-grid | bg-text text-background py-4 px-6 grid grid-rows-[auto_0fr] has-[~#accordion:checked]:grid-rows-[auto_1fr] transition-[grid-template-rows] rounded-md">
 						<h2 className="text-3xl font-semibold">Inspiration</h2>
 						<p className="text-lg overflow-hidden">

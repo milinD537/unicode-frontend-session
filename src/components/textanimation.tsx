@@ -1,4 +1,4 @@
-export function Textanimation({ name }: { name: string }) {
+export default function Textanimation({ name }: { name: string }) {
 	return name.split(" ").map((item, index) => (
 		<h1
 			key={index}
